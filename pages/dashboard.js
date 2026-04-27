@@ -78,7 +78,7 @@ export default function Dashboard() {
         setContent(structuredContent);
         setSourceUrl(cleanUrl);
         setImportUrl("");
-        alert("✨ Article generated successfully!");
+        alert("Article generated successfully!");
       } else {
         throw new Error("Protected");
       }
@@ -89,7 +89,7 @@ export default function Dashboard() {
       setContent(`I've discovered an important update on ${domain}.\n\nThis specific platform has high security restrictions that prevent automatic text extraction. However, the information is highly relevant to our Machine Learning hub.\n\n[ACTION]\nPlease click the 'View Original Source' button below to read the full content.`);
       setSourceUrl(cleanUrl);
       setImportUrl("");
-      alert("⚠️ Site is highly protected. Generated a professional link fallback.");
+      alert("Site is highly protected. Generated a professional link fallback.");
     } finally { setIsImporting(false); }
   };
 
@@ -114,7 +114,7 @@ export default function Dashboard() {
       <div style={styles.mainLayout}>
         <aside style={styles.sidebar}>
           <div style={styles.card}>
-            <h3 style={styles.cardTitle}>AI Article Generator</h3>
+            <h3 style={styles.cardTitle}>Article Generator</h3>
             <div style={styles.importGroup}>
               <input style={styles.importInput} placeholder="Paste link..." value={importUrl} onChange={(e) => setImportUrl(e.target.value)} />
               <button onClick={importFromUrl} style={styles.importBtn} disabled={isImporting}>{isImporting ? "..." : "Build"}</button>
